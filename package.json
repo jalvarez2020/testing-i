@@ -5,6 +5,9 @@
   "repository": "https://github.com/jalvarez2020/testing-i.git",
   "author": "Javier Alavrez <javieralvarez82@live.com>",
   "license": "MIT",
+    "scripts": {
+      "test": "jest --watch"
+    },
   "devDependencies": {
     "jest": "^24.0.0"
   }
