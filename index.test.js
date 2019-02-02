@@ -2,11 +2,11 @@ const item = require('./index.js');
 
 describe('success function', () => {
 
-    test('success test', () => {
+ test('should test', () => {
         expect(item.success(items)).toBeDefined();
-        expect(item.success(items)).toBeLessThan(21);
-        expect(item.success(items)).
-        expect(item.success(items)).
+        expect(item.success(items)).toBeTruthy();
+        expect(item.success(items)).toReturn(items.enhancement)
+       
     })
 }) 
 
@@ -17,5 +17,5 @@ const items = {
         name: "bastard sword",
         type: "weapon",
         durability: 100,
-        enhancement: "+ " + 20,
+        enhancement: `${[item.name]} 20`
     }
