@@ -1,21 +1,31 @@
 const item = require('./index.js');
 
-describe('success function', () => {
-
- test('should test', () => {
-        expect(item.success(items)).toBeDefined();
-        expect(item.success(items)).toBeTruthy();
-        expect(item.success(items)).toReturn(items.enhancement)
-       
+describe('Success function Testing', () => {
+ test('Enhancement test', () => {
+        expect(item.success(sword)).toBeTruthy();
     })
 }) 
 
 
+describe('Fail test'), () => {
+  test('Enhancement Fail Test', () => {
+      expect(item.fail(sword)).
+  })
+}
 
 
-const items = {
+// describe('Repair Function Test'), () => {
+//     test('Enhancement Fail Test', () => {
+//         expect(item.fail(sword))
+//     })
+//   }
+
+
+
+//Test Object
+const sword = {
         name: "bastard sword",
         type: "weapon",
         durability: 100,
-        enhancement: `${[item.name]} 20`
+        enhancement: 0,
     }
