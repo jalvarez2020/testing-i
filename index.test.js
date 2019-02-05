@@ -15,11 +15,12 @@ describe('Fail Function Testing', () => {
 })
 
 
-// describe('Repair Function Test'), () => {
-//     test('Enhancement Fail Test', () => {
-//         expect(item.fail(sword))
-//     })
-//   }
+describe('Repair Function Testing', () => {
+    test('Repair test', () => {
+        expect(item.repair(sword.durability)).toEqual(100);
+
+    })
+})
 
 
 
@@ -27,6 +28,6 @@ describe('Fail Function Testing', () => {
 const sword = {
         name: "bastard sword",
         type: "weapon",
-        durability: 100,
+        durability: 90,
         enhancement: 10,
     }

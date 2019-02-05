@@ -16,13 +16,12 @@ success = (item) => {
     if(item.enhancement <= 15) {
             weaponName
             return item
-            
         }
       else if(item.enhancement === 16) {
             weaponName
             `${item.enhancement = swordLevels.PRI}`
             return item;
-            }
+        }
       else if(item.enhancement === 17) {
            weaponName
             item.enhancement =`${item.enhancement = swordLevels.DUO}`;
@@ -38,42 +37,39 @@ success = (item) => {
             item.enhancement =`${item.enhancement = swordLevels.TET}`;
             return item;
         }
-        else if(item.enhancement === 20) {
+      else if(item.enhancement === 20) {
             weaponName
             item.enhancement =`${item.enhancement = swordLevels.PEN}`;
             return item;
         }
-    
-        else(item.enhancement > 20) 
+      else(item.enhancement > 20) 
             const error = "Weapon is at max"
             return error
         
     
 }
 
-fail = (item) => {
+ fail = (item) => {
     
     let durabilityDamage = item.durability - 5;
     let enhancedDamage = item.durability - 10;
     let negEnhanceLevel = item.enhancement - 1;
   
+
     if(item.enhancement <= 14) {
             item.durability = durabilityDamage;
             item.name = `[+${item.enhancement}] ${item.name}`;
         }
- 
       else if(item.enhancement === 16) {
             item.durability = durabilityDamage;
             item.name = `[+${item.enhancement}] ${item.name}`
         }
- 
       else if(item.enhancement > 16) {
            item.enhancement = negEnhanceLevel
            item.durability = enhancedDamage
            item.name = `[+${item.enhancement}] ${item.name}`
         }
- 
-  eLevel = (item) => {
+ eLevel = (item) => {
          const swordLevels = [
              "PRI",
              "DUO",
@@ -98,16 +94,20 @@ fail = (item) => {
          else if(swordLevel === 20) {
             item.enhancement = swordLevels[4];
          }
-     
-     }
- 
-     eLevel(item);
+}
+ eLevel(item);
  
        return item //end of eLevel
 }
 
 
 repair = (item) => {
+
+    if(item.durability !== 100) {
+       return item.durability = 100;
+    }
+
+    else return "Item durability at MaX!"
 
 }
 
